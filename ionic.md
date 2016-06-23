@@ -1,4 +1,4 @@
-#**最近在做移动端的项目，Hybrid模式，使用Ionic框架，是基于AngularJS的。磕磕绊绊碰到了不少问题，也学到了不少东西。**
+####**最近在做移动端的项目，Hybrid模式，使用Ionic框架，是基于AngularJS的。磕磕绊绊碰到了不少问题，也学到了不少东西。**
 
 #1. Ionic
 1. Ionic http://ionicframework.com/
