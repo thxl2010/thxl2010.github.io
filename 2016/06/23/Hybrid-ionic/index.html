@@ -1,0 +1,64 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Duyb"><title>Hybrid：ionic · Duyb</title><meta name="description" content="最近在做移动端的项目，Hybrid模式，使用Ionic框架，是基于AngularJS的。磕磕绊绊碰到了不少问题，也学到了不少东西。1. Ionic
+Ionic http://ionicframework.com/
+配置 http://ionicframework.com/getting-starte"><meta name="keywords" content="js,JavaScript,HTML,CSS,Duyb,2010thxl"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.png" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">Duyb</a></h3><div class="description"><p>摇一叶小舟，在代码的大海里遨游……</p></div></div></div><ul class="social-links"><li><a href="http://github.com/thxl2010"><i class="fa fa-github"></i></a></li></ul><div class="footer"><a target="_blank" href="/"><span>Theme by </span></a><a href="https://www.caicai.me"> CaiCai </a><span>&</span><a href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/about">关于</a></li><li><a href="/archives">归档</a></li><li><a href="/links">友链</a></li></div><div class="information"><div class="back_btn"><li><a onclick="window.history.go(-1)" class="fa fa-chevron-left"> </a></li></div><div class="avatar"><img src="/images/logo.png"></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>Hybrid：ionic</a></h3></div><div class="post-content"><h4 id="最近在做移动端的项目，Hybrid模式，使用Ionic框架，是基于AngularJS的。磕磕绊绊碰到了不少问题，也学到了不少东西。"><a href="#最近在做移动端的项目，Hybrid模式，使用Ionic框架，是基于AngularJS的。磕磕绊绊碰到了不少问题，也学到了不少东西。" class="headerlink" title="最近在做移动端的项目，Hybrid模式，使用Ionic框架，是基于AngularJS的。磕磕绊绊碰到了不少问题，也学到了不少东西。"></a><strong>最近在做移动端的项目，Hybrid模式，使用Ionic框架，是基于AngularJS的。磕磕绊绊碰到了不少问题，也学到了不少东西。</strong></h4><h1 id="1-Ionic"><a href="#1-Ionic" class="headerlink" title="1. Ionic"></a>1. Ionic</h1><ol>
+<li>Ionic <a href="http://ionicframework.com/" target="_blank" rel="external">http://ionicframework.com/</a></li>
+<li>配置 <a href="http://ionicframework.com/getting-started/" target="_blank" rel="external">http://ionicframework.com/getting-started/</a><ul>
+<li>First, install Node.js. Then, install the latest Cordova and Ionic command-line tools.：<code>npm install -g cordova ionic</code><br>Cordova提供了一组设备相关的API，通过这组API，移动应用能够以JavaScript访问原生的设备功能，如摄像头、麦克风等。Cordova还提供了一组统一的JavaScript类库，以及为这些类库所用的设备相关的原生后台代码。</li>
+<li>Follow the Android and iOS platform guides to install required platform dependencies：<a href="http://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html" target="_blank" rel="external">http://cordova.apache.org/docs/en/latest/guide/platforms/android/index.html</a><ol>
+<li>安装jdk； </li>
+<li>安装Android SDK  <a href="http://developer.android.com/sdk/index.html" target="_blank" rel="external">http://developer.android.com/sdk/index.html</a></li>
+<li>安装 Apache  ant <a href="http://ant.apache.org/bindownload.cgi" target="_blank" rel="external">http://ant.apache.org/bindownload.cgi</a></li>
+</ol>
+</li>
+<li>Start a project ： Create an Ionic project using one of our ready-made app templates, or a blank one to start fresh.<br><code>$ ionic start myApp tabs</code> </li>
+</ul>
+</li>
+<li><p>Run it ： </p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">$</span><span class="bash"> <span class="built_in">cd</span> myApp</span></div><div class="line"><span class="meta">$</span><span class="bash"> ionic platform add ios</span></div><div class="line"><span class="meta">$</span><span class="bash"> ionic build ios</span></div><div class="line"><span class="meta">$</span><span class="bash"> ionic <span class="built_in">emulate</span> ios</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>在本地浏览器测试:  <code>ionic serve</code>/<code>ionic serve --address ip</code></p>
+</li>
+</ol>
+<h1 id="2-项目"><a href="#2-项目" class="headerlink" title="2. 项目"></a>2. 项目</h1><ol>
+<li>自定义样式：sass<br>首先在项目目录下,运行命令<code>$ionic setup sass    $ionic serve</code><br>运行以后, 就会对scss/ionic.app.scss文件监控, 有修改, 会自动编译该文件, 输出到css/ionic.app.css<br>所以你每次修改保存scss文件后, 浏览器会看到实时的效果, 非常方便. </li>
+<li><p>跳转链接 </p>
+<ul>
+<li>使用内置浏览器插件：inAppBrowser ：cordova-plugin-inappbrowser<br><a href="https://www.thepolyglotdeveloper.com/2014/07/launch-external-urls-ionicframework/" target="_blank" rel="external">https://www.thepolyglotdeveloper.com/2014/07/launch-external-urls-ionicframework/</a><br><a href="http://ngcordova.com/docs/plugins/inAppBrowser/" target="_blank" rel="external">http://ngcordova.com/docs/plugins/inAppBrowser/</a><br><strong>安装</strong>：<code>cordova plugin add cordova-plugin-inappbrowser</code></li>
+<li>a标签 ： Setting ng-href and then referencing it in window.open works for me.<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;ion-view title=&quot;Test Page&quot;&gt;</div><div class="line">  &lt;ion-content&gt;</div><div class="line">    &lt;div class=&quot;list&quot;&gt;</div><div class="line">      &lt;a class=&quot;item&quot; href=&quot;#&quot; onclick=&quot;window.open(&apos;http://www.baidu.com/&apos;, &apos;_system&apos;, &apos;location=yes&apos;); return false;&quot;&gt;</div><div class="line">        Open a Browser</div><div class="line">      &lt;/a&gt;</div><div class="line">      &lt;a class=&quot;item&quot; href=&quot;#&quot; onclick=&quot;window.open(&apos;http://www.baidu.com/&apos;, &apos;_system&apos;, &apos;location=yes&apos;); return false;&quot;&gt;</div><div class="line">        Open a Browser</div><div class="line">      &lt;/a&gt;</div><div class="line">      &lt;a class=&quot;item&quot; ng-href=&quot;&#123;&#123;choice.href&#125;&#125;&quot; onclick=&quot;window.open(this.href, &apos;_system&apos;, &apos;location=yes&apos;); return false;&quot;&gt;</div><div class="line">        Open a Browser</div><div class="line">      &lt;/a&gt;</div><div class="line">    &lt;/div&gt;</div><div class="line">  &lt;/ion-content&gt;</div><div class="line">&lt;/ion-view&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>angular 返回html片段，自动转义html标签<br><strong>使用</strong>：<strong>ng-bind-html=”article.content | trustHtml”</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&lt;article class=&quot;commodity-details&quot; ng-bind-html=&quot;choice.brief | trustHtml&quot;&gt;&lt;/article&gt;</div><div class="line"></div><div class="line">// app.js</div><div class="line">angular.module(&apos;starter&apos;, [&apos;ionic&apos;, &apos;starter.controllers&apos;, &apos;starter.services&apos;, &apos;starter.filters&apos;]);</div><div class="line"></div><div class="line">// filter.js</div><div class="line">angular.module(&apos;starter.filters&apos;)</div><div class="line">    .filter(&apos;trustHtml&apos;, function ($sce) &#123;</div><div class="line">      return function (input) &#123;</div><div class="line">        return $sce.trustAsHtml(input);</div><div class="line">      &#125;</div><div class="line">    &#125;);</div></pre></td></tr></table></figure>
+</li>
+<li><p>图片轮播:</p>
+<ul>
+<li><p><code>ion-slide-box</code>图片加载显示不出问题<br><strong>添加</strong><code>ng-if</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;ion-slide-box ng-if=&quot;recommendedProductDetail.mainPictures&quot;&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>循环显示设置</p>
+</li>
+</ul>
+<ol>
+<li>设置属性： <code>does-continue=&quot;true&quot;</code></li>
+<li>js：<code>$ionicSlideBoxDelegate.loop(true);</code>  </li>
+</ol>
+<ul>
+<li>一张主图时不显示轮播圆点 <strong>show-pager</strong><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">&lt;ion-slide-box ng-if=&quot;recommendedProductDetail.mainPictures&quot; does-continue=&quot;true&quot;</div><div class="line">               ng-init=&quot;sliderPagerShow=(recommendedProductDetail.mainPictures.length == 1 ? false : true)&quot; show-pager=&quot;&#123;&#123;sliderPagerShow&#125;&#125;&quot;&gt;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+</ol>
+<ol>
+<li><p>filter： currency </p>
+<pre><code>&lt;h1 class=&quot;title&quot;&gt;{{recommendedProductDetail.price / 100 | currency:(recommendedProductDetail.paiceUnit || "￥"):0}}&lt;/h1&gt;
+</code></pre></li>
+<li><p>搜索 点击出现浮层 显示类别</p>
+<ul>
+<li>浮动框: $ionicPopover 是一个可以浮在app内容上的一个视图框。</li>
+<li>对话框: $ionicPopup ionic 对话框服务允许程序创建、显示弹出窗口。$ionicPopup 提供了3个方法：alert(), prompt(),以及 confirm() 。<br><strong>问题</strong>：1. 浮动框有三角号 2. 都有$ionicBackdrop背景层，阻止下一层的点击<br><strong>解决</strong>：使用模板</li>
+</ul>
+</li>
+<li>模板：使用<code>ng-include</code>指令，可以利用ng-include指令在HTML中直接使用内联模板，例如：<br><code>&lt;div ng-include=&quot;&#39;a.html&#39;&quot;&gt;&lt;/div&gt;</code></li>
+</ol>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2016-06-23</span><i class="fa fa-tag"></i><a href="/tags/ionic/" title="ionic" class="tag">ionic </a><a href="/tags/Hybrid/" title="Hybrid" class="tag">Hybrid </a></div></div></div></div><div class="share"><div class="evernote"><a href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank" class="fa fa-bookmark"></a></div><div class="weibo"><a href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));" class="fa fa-weibo"></a></div><div class="twitter"><a href="http://twitter.com/home?status=,https://thxl2010.github.io/2016/06/23/Hybrid-ionic/,Duyb,Hybrid：ionic,;" class="fa fa-twitter"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a role="navigation" href="/2017/07/29/Hexo/" title="Hexo配置" class="btn">上一篇</a></li></ul></div></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script></body></html>
